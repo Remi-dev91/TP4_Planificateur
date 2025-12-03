@@ -1,10 +1,12 @@
 #ifndef CONTEXTEROBOT_H
 #define CONTEXTEROBOT_H
+#include <iostream>
 
 class ContexteRobot {
 private:
     double m_x, m_y, m_z;
     bool m_pince_ouverte;
+    int m_angle_robot;
 
 public:
     // Constructeur
@@ -21,6 +23,7 @@ public:
     void ouvrirPince();
     void fermerPince();
     void attendre(int p_duree);
+    void rotation(int p_angle);
 
     // Affichage
     void afficherPosition();
