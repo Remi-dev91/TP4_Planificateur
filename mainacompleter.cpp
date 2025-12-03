@@ -6,6 +6,7 @@
 #include "allera.h"
 #include "poserobjet.h"
 #include "attendre.h"
+#include "rotation.h"
 
 #include <iostream>
 #include <fstream>
@@ -63,6 +64,13 @@ int main() {
             journal.seekp(0, ios::end);
             journal<<commande<<endl;
 
+        }else if (commande == "ALLER_A") {
+            double dx, dy ,dz;
+            fichier >> dx >> dy >> dz;
+            plan.ajouter(new AllerA(dx,dy,dz));
+            journal.seekp(0, ios::end);
+            journal<<commande<<endl;
+
         }else if (commande == "POSEROBJET") {
             double dx, dy ,dz;
             fichier >> dx >> dy >> dz;
@@ -72,6 +80,13 @@ int main() {
 
         }else if (commande == "ATTENDRE_2") {
             plan.ajouter(new Attendre(2));
+            journal.seekp(0, ios::end);
+            journal<<commande<<endl;
+
+        }else if (commande == "ROTATION") {
+            int angleRobot;
+            fichier >> angleRobot;
+            plan.ajouter(new Rotation(angleRobot));
             journal.seekp(0, ios::end);
             journal<<commande<<endl;
 
