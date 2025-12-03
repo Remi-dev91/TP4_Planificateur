@@ -7,10 +7,10 @@ FermerPince::FermerPince()
 }
 
 void FermerPince::executer(ContexteRobot& ctx) {
-    std::cout << "Fermer Pince..." << std::endl;
+    afficherNom();
     ctx.fermerPince();
 }
 
 void FermerPince::afficherNom() const {
-    std::cout << "Action: FermerPince";
+    std::cout << "Action: FermerPince"<< std::endl;
 }

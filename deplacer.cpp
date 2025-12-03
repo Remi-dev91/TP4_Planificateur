@@ -14,11 +14,11 @@ void Deplacer::executer(ContexteRobot& ctx) {
     double nouveau_y = ctx.getY() + m_dy;
     double nouveau_z = ctx.getZ() + m_dz;
 
-    std::cout << "Deplacer de (dx:" << m_dx << ", dy:" << m_dy << ", dz:" << m_dz << ")..." << std::endl;
+    afficherNom();
 
     ctx.deplacerVers(nouveau_x, nouveau_y, nouveau_z);
 }
 
 void Deplacer::afficherNom() const {
-    std::cout << "Action: Deplacer (dx="<<m_dx<< ", dy=" << m_dy << ", dz=" << m_dz << ")";
+    std::cout << "Action: Deplacer (dx="<<m_dx<< ", dy=" << m_dy << ", dz=" << m_dz << ")"<< std::endl;
 }

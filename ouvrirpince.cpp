@@ -7,10 +7,10 @@ OuvrirPince::OuvrirPince()
 }
 
 void OuvrirPince::executer(ContexteRobot& ctx) {
-    std::cout << "Ouvrir Pince..." << std::endl;
+    afficherNom();
     ctx.ouvrirPince();
 }
 
 void OuvrirPince::afficherNom() const {
-    std::cout << "Action: OuvrirPince";
+    std::cout << "Action: OuvrirPince"<< std::endl;
 }

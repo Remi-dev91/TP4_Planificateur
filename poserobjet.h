@@ -9,6 +9,7 @@ private:
 public:
     PoserObjet(double p_finX,double p_finY,double p_finZ);
     void executer(ContexteRobot& ctx) override;
+    void afficherNom() const override;
 };
 
 
